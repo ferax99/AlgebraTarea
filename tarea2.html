@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	</head>
+<body>
+	<h3  >2017096959</h3>
+	<h3  class="border-bottom">Calculo y Algebra lineal 2020</h3>
+<div class="container ">
+		<div class="card d-inline-block" style="width: 18rem;">
+		  <img src="1.png" class="card-img-top" height="200px" width="200px" alt="...">
+		  <div class="card-body">
+		    <p class="card-text">Calcular con  1 Millon de Terminos </p>
+		    <a href="#" class="btn btn-primary" onclick="serie1()">Calcular</a>
+		  </div>
+		</div>
+		<div class="card d-inline-block" style="width: 18rem;">
+		  <img src="2.png" class="card-img-top" height="200px" width="200px" alt="...">
+		  <div class="card-body">
+		    <p class="card-text">Calcular con  100 terminos </p>
+		    <a href="#" class="btn btn-primary" onclick="serie2()">Calcular</a>
+		  </div>
+		</div>
+		<div class="card d-inline-block" style="width: 18rem;">
+		  <img src="3.png" class="card-img-top" height="200px" width="200px" alt="...">
+		  <div class="card-body">
+		    <p class="card-text">Calcular con  1 Millon de Terminos </p>
+		    <a href="#" class="btn btn-primary" onclick="serie3()">Calcular</a>
+		  </div>
+		</div>
+		<div class="card d-inline-block" style="width: 18rem;">
+		  <img src="4.png" class="card-img-top" height="200px" width="200px" alt="...">
+		  <div class="card-body">
+		    <p class="card-text">Calcular con  1 Millon de Terminos </p>
+		    <a href="#" class="btn btn-primary" onclick="serie4()">Calcular</a>
+		  </div>
+		</div>
+</div>
+<h1 style="text-align: center;">resultado:</h1>
+<h1 id="demo" class="border-bottom" style="text-align: center; color:blue;"></h1>
+
+<script>
+function serie1() {
+	let n = 1 ;
+	let num=0;
+	while (n < 1000000){
+		num += ((-1)**n) /n;
+		n++;
+	}
+
+  document.getElementById("demo").innerHTML = num;
+}
+function serie2() {
+	let n = 1 ;
+	let num=0;
+	while (n <= 100){
+		num += ((2)**n) /fac(n);
+		n++;
+	}
+  document.getElementById("demo").innerHTML = num;
+}
+
+function fac(n){
+	let x= 1
+	for (let i = 1;i<=n;i++){
+		x=x*i;
+	}
+	return x;
+}
+function serie3() {
+	let n = 1 ;
+	let num=0;
+	while (n < 1000000){
+		num += ((-1)**n) /  Math.sqrt(n); 
+		n++;
+	}
+
+  document.getElementById("demo").innerHTML = num;
+}
+function serie4() {
+	let n = 1 ;
+	let num=0;
+	while (n < 1000000){
+		num += ((-1)**n) /  Math.log(n);
+		n++;
+	}
+	if (-Infinity == num){num = '-∞';}
+  document.getElementById("demo").innerHTML = num;
+}
+
+</script>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
